@@ -63,7 +63,6 @@ SPDX-License-Identifier: CC0-1.0
         <testng.version>7.5.1</testng.version>
         <arquillian.version>1.8.0.Final</arquillian.version>
         <rest-assured.version>5.5.6</rest-assured.version>
-        <mock-server.version>5.11.1</mock-server.version>
 
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -364,12 +363,6 @@ SPDX-License-Identifier: CC0-1.0
                 <groupId>io.rest-assured</groupId>
                 <artifactId>xml-path</artifactId>
                 <version>${rest-assured.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mock-server</groupId>
-                <artifactId>mockserver-netty</artifactId>
-                <version>${mock-server.version}</version>
                 <scope>test</scope>
             </dependency>
 
