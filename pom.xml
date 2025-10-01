@@ -42,7 +42,7 @@ SPDX-License-Identifier: CC0-1.0
 <!--    </repositories>-->
 
     <properties>
-        <odh-alpinebits.version>3.0.0</odh-alpinebits.version>
+        <odh-alpinebits.version>4.0.0-SNAPSHOT</odh-alpinebits.version>
 
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
@@ -62,7 +62,7 @@ SPDX-License-Identifier: CC0-1.0
 
         <testng.version>7.5.1</testng.version>
         <arquillian.version>1.8.0.Final</arquillian.version>
-        <rest-assured.version>5.4.0</rest-assured.version>
+        <rest-assured.version>5.5.6</rest-assured.version>
         <mock-server.version>5.11.1</mock-server.version>
 
         <java.version>1.8</java.version>
@@ -163,17 +163,60 @@ SPDX-License-Identifier: CC0-1.0
 
     <dependencyManagement>
         <dependencies>
-            <!-- Force usage of logback-classic 1.2.13, because 1.2.12 brought by spring-boot 2.7.18 has vulnerabilities -->
+            <!--
+                Use current version of commons-io to fix a security vulnerability
+                introduced by org.apache.commons:commons-fileupload2-javax in
+                alpinebits-servlet-impl module.
+            -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.20.0</version>
+            </dependency>
+            <!--
+                Use current version of commons-codec to fix a security vulnerability
+                introduced by io.rest-assured:rest-assured
+            -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.19.0</version>
+            </dependency>
+            <!--
+                Use current version of commons-codec to fix a security vulnerability
+                introduced by org.glassfish.jersey.media:jersey-media-json-jackson
+            -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.15.0</version>
+            </dependency>
+            <!--
+                Use current version of commons-codec to fix a security vulnerability
+                introduced by org.springframework.boot:spring-boot-starter-logging
+            -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.2.13</version>
+                <version>1.5.13</version>
             </dependency>
-            <!-- Force usage of logback-core 1.2.13, because 1.2.12 brought by spring-boot 2.7.18 has vulnerabilities -->
+            <!--
+                Use current version of commons-codec to fix a security vulnerability
+                introduced by org.springframework.boot:spring-boot-starter-logging
+            -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.2.13</version>
+                <version>1.5.13</version>
+            </dependency>
+            <!--
+                Use current version of commons-codec to fix a security vulnerability
+                introduced by io.rest-assured:rest-assured
+            -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.18.0</version>
             </dependency>
 
             <dependency>
