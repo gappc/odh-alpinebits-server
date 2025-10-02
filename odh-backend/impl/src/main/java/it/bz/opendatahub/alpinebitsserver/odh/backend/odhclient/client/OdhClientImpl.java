@@ -58,7 +58,7 @@ public class OdhClientImpl implements AuthenticatedOdhClient {
             this.isAuthenticated = true;
         } catch (AuthenticationException e) {
             this.isAuthenticated = false;
-            throw new AuthenticationException("Authentication error", e);
+            throw new AuthenticationException("invalid or missing username/password", e);
         }
     }
 
