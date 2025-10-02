@@ -182,7 +182,7 @@ SPDX-License-Identifier: CC0-1.0
                 <version>1.19.0</version>
             </dependency>
             <!--
-                Use current version of commons-codec to fix a security vulnerability
+                Use most up-to-date compatible version of jackson-core to fix a security vulnerability
                 introduced by org.glassfish.jersey.media:jersey-media-json-jackson
             -->
             <dependency>
@@ -209,7 +209,7 @@ SPDX-License-Identifier: CC0-1.0
                 <version>1.2.13</version>
             </dependency>
             <!--
-                Use current version of commons-codec to fix a security vulnerability
+                Use current version of commons-lang3 to fix a security vulnerability
                 introduced by io.rest-assured:rest-assured
             -->
             <dependency>
