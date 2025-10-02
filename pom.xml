@@ -191,22 +191,22 @@ SPDX-License-Identifier: CC0-1.0
                 <version>2.15.0</version>
             </dependency>
             <!--
-                Use current version of commons-codec to fix a security vulnerability
+                Use most up-to-date compatible version of logback-classic to fix a security vulnerability
                 introduced by org.springframework.boot:spring-boot-starter-logging
             -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.13</version>
+                <version>1.2.13</version>
             </dependency>
             <!--
-                Use current version of commons-codec to fix a security vulnerability
+                Use most up-to-date compatible version of logback-core to fix a security vulnerability
                 introduced by org.springframework.boot:spring-boot-starter-logging
             -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.5.13</version>
+                <version>1.2.13</version>
             </dependency>
             <!--
                 Use current version of commons-codec to fix a security vulnerability
